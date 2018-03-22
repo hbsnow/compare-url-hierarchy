@@ -1,6 +1,6 @@
 {
   "name": "compare-url-hierarchy",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "repository": "https://github.com/hbsnow/compare-url-hierarchy.git",
   "author": "hbsnow <yuki.4uing@gmail.com>",
@@ -9,13 +9,15 @@
     "test": "run-p xo ava",
     "xo": "xo --fix --reporter",
     "ava": "ava --verbose",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
     "ava": "^0.25.0",
     "npm-run-all": "^4.1.2",
     "semantic-release": "^15.1.4",
-    "xo": "^0.20.3"
+    "xo": "^0.20.3",
+    "travis-deploy-once": "^4.4.1"
   },
   "xo": {
     "semicolon": false,
