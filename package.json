@@ -1,30 +1,47 @@
 {
   "name": "compare-url-hierarchy",
   "version": "0.0.0-development",
-  "main": "index.js",
-  "repository": "https://github.com/hbsnow/compare-url-hierarchy.git",
   "author": "hbsnow <yuki.4uing@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "test": "run-p xo ava",
-    "xo": "xo --fix --reporter",
-    "ava": "ava --verbose",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
-  },
-  "devDependencies": {
-    "ava": "^0.25.0",
-    "npm-run-all": "^4.1.2",
-    "semantic-release": "^15.1.4",
-    "xo": "^0.20.3",
-    "travis-deploy-once": "^4.4.1"
-  },
-  "xo": {
-    "semicolon": false,
-    "space": 2,
-    "prettier": true
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   },
   "dependencies": {
-    "is-absolute-url": "^2.1.0"
-  }
+    "is-absolute-url": "^3.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "ava": "^1.4.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.17.0",
+    "rollup-plugin-typescript2": "^0.21.0",
+    "semantic-release": "^15.13.3",
+    "travis-deploy-once": "^5.0.11",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "main": "./lib/compare-url-hierarchy.js",
+  "repository": "https://github.com/hbsnow/compare-url-hierarchy.git",
+  "scripts": {
+    "test": "ava --verbose",
+    "build": "tsc",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once",
+    "format": "prettier --write '**/*.{js,mjs,ts,md,}' '!lib/**/*.js'",
+    "lint": "eslint src/* --fix"
+  },
+  "types": "./lib/compare-url-hierarchy.d.ts"
 }

@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# rollup
+.rpt2_cache
+
+# lib
+lib/*
+!lib/*.d.ts
