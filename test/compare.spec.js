@@ -1,5 +1,5 @@
 import test from 'ava'
-import compare from '.'
+import compare from '../src/compare-url-hierarchy'
 
 test('同じ階層であれば0を戻す', t => {
   t.is(compare('/', '/foo'), 0)
