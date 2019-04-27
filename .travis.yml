@@ -19,11 +19,15 @@ before_script:
 
 script:
   - npm test
-  - npm run build
 
-after_success:
-  - npm run semantic-release
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script:
+        - npm run build
+        - npm run semantic-release
 
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master
