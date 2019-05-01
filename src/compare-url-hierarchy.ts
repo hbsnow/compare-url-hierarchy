@@ -20,7 +20,7 @@ const calcHierarchy = (path: string): number =>
  * @param from based path
  * @param to compared path
  */
-export default (from: string, to: string): number => {
+export const compare = (from: string, to: string): number => {
   if (isRelative(from)) {
     throw new Error('`from` must be absolute URL')
   }
