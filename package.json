@@ -21,7 +21,7 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.17.1",
+    "prettier": "^1.18.2",
     "semantic-release": "^15.13.12",
     "ts-node": "^8.2.0",
     "typescript": "^3.5.1"
@@ -33,12 +33,12 @@
   "main": "./lib/compare-url-hierarchy.js",
   "repository": "https://github.com/hbsnow/compare-url-hierarchy.git",
   "scripts": {
-    "test": "ava --verbose",
+    "test": "tsc && ava --verbose",
     "build": "tsc",
     "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once",
     "format": "prettier --write '**/*.{js,mjs,ts,md,}' '!lib/**/*.js'",
-    "lint": "eslint src/* --fix"
+    "lint": "eslint src/*",
+    "lintfix": "eslint src/* --fix"
   },
   "types": "./lib/compare-url-hierarchy.d.ts"
 }

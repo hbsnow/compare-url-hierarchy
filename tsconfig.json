@@ -5,7 +5,8 @@
     "target": "es5",
     "module": "commonjs",
     "strict": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
+    "declaration": true,
     "paths": {
       "*": ["@types/*"]
     },
@@ -14,5 +15,12 @@
     ],
     "resolveJsonModule": true,
     "esModuleInterop": true
-  }
+  },
+  "include": [
+      "src/**/*"
+  ],
+  "exclude": [
+    ".git",
+    "node_modules"
+  ]
 }
