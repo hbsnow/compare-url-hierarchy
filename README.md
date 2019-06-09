@@ -7,16 +7,17 @@ Compare URL hierarchy.
 ## Installation
 
 ```
-npm i compare-url-hierarchy
+yarn add @hbsnow/compare-url-hierarchy
 ```
 
 ## Usage
 
 ```
 import { compare } from 'compare-url-hierarchy'
-compare('/', '/foo') // => 0
-compare('/foo/bar', '/') // => -1
-compare('/', 'https://example.org/foo/bar/baz') // =>  2
+
+compare('/', '/foo') // -> 0
+compare('/foo/bar', '/') // -> -1
+compare('/', 'https://example.org/foo/bar/baz') // -> 2
 ```
 
 ## LICENSE
