@@ -21,13 +21,6 @@ script:
   - npm test
   - npm run build
 
-jobs:
-  include:
-    - stage: release
-      node_js: lts/*
-      script:
-        - npm run semantic-release
-
 branches:
   only:
     - master
