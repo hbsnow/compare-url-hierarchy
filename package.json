@@ -1,6 +1,6 @@
 {
-  "name": "compare-url-hierarchy",
-  "version": "0.0.0-development",
+  "name": "@hbsnow/compare-url-hierarchy",
+  "version": "1.2.2",
   "author": "hbsnow <yuki.4uing@gmail.com>",
   "ava": {
     "compileEnhancements": false,
@@ -22,7 +22,6 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2",
-    "semantic-release": "^15.13.12",
     "ts-node": "^8.2.0",
     "typescript": "^3.5.1"
   },
@@ -30,15 +29,17 @@
     "lib"
   ],
   "license": "MIT",
-  "main": "./lib/compare-url-hierarchy.js",
+  "main": "lib/compare-url-hierarchy.js",
   "repository": "https://github.com/hbsnow/compare-url-hierarchy.git",
   "scripts": {
     "test": "tsc && ava --verbose",
     "build": "tsc",
-    "semantic-release": "semantic-release",
     "format": "prettier --write '**/*.{js,mjs,ts,md,}' '!lib/**/*.js'",
     "lint": "eslint src/*",
     "lintfix": "eslint src/* --fix"
   },
-  "types": "./lib/compare-url-hierarchy.d.ts"
+  "types": "lib/compare-url-hierarchy.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
 }
