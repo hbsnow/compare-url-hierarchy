@@ -1,6 +1,6 @@
 {
   "name": "@hbsnow/compare-url-hierarchy",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "hbsnow <yuki.4uing@gmail.com>",
   "ava": {
     "compileEnhancements": false,
